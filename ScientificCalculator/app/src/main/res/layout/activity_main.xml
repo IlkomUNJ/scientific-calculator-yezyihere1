@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2E2E2E"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#1C1C1C"
+        android:gravity="end|bottom"
+        android:padding="16dp"
+        android:text="0"
+        android:textColor="#FFFFFF"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:autoSizeTextType="uniform"
+        app:autoSizeMinTextSize="12sp"
+        app:autoSizeMaxTextSize="48sp"
+        app:autoSizeStepGranularity="2sp"
+        android:maxLines="1"/>
+
+
+
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:columnCount="5"
+        android:rowCount="7"
+        android:alignmentMode="alignMargins"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDisplay">
+
+
+        <Button style="@style/CalculatorButton.Function" android:text="sin" />
+        <Button style="@style/CalculatorButton.Function" android:text="cos" />
+        <Button style="@style/CalculatorButton.Function" android:text="tan" />
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+            <RadioButton
+                android:id="@+id/radioDeg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deg"
+                android:textColor="#FFFFFF"
+                android:checked="true" />
+            <RadioButton
+                android:id="@+id/radioRad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rad"
+                android:textColor="#FFFFFF" />
+        </RadioGroup>
+        <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_columnWeight="1" />
+
+        <Button style="@style/CalculatorButton.Function" android:text="sin⁻¹" />
+        <Button style="@style/CalculatorButton.Function" android:text="cos⁻¹" />
+        <Button style="@style/CalculatorButton.Function" android:text="tan⁻¹" />
+        <Button style="@style/CalculatorButton.Function" android:text="π" />
+        <Button style="@style/CalculatorButton.Function" android:text="e" />
+
+        <Button style="@style/CalculatorButton.Function" android:text="xʸ" />
+        <Button style="@style/CalculatorButton.Function" android:text="x³" />
+        <Button style="@style/CalculatorButton.Function" android:text="x²" />
+        <Button style="@style/CalculatorButton.Function" android:text="eˣ" />
+        <Button style="@style/CalculatorButton.Function" android:text="10ˣ" />
+
+        <Button style="@style/CalculatorButton.Function" android:text="ʸ√x" />
+        <Button style="@style/CalculatorButton.Function" android:text="³√x" />
+        <Button style="@style/CalculatorButton.Function" android:text="√x" />
+        <Button style="@style/CalculatorButton.Function" android:text="ln" />
+        <Button style="@style/CalculatorButton.Function" android:text="log" />
+
+        <Button style="@style/CalculatorButton.Function" android:text="(" />
+        <Button style="@style/CalculatorButton.Function" android:text=")" />
+        <Button style="@style/CalculatorButton.Function" android:text="1/x" />
+        <Button style="@style/CalculatorButton.Function" android:text="%" />
+        <Button style="@style/CalculatorButton.Function" android:text="n!" />
+
+        <Button style="@style/CalculatorButton.Number" android:text="7" />
+        <Button style="@style/CalculatorButton.Number" android:text="8" />
+        <Button style="@style/CalculatorButton.Number" android:text="9" />
+        <Button style="@style/CalculatorButton.Operator" android:text="+" />
+        <Button style="@style/CalculatorButton.Operator" android:text="Back" />
+
+        <Button style="@style/CalculatorButton.Number" android:text="4" />
+        <Button style="@style/CalculatorButton.Number" android:text="5" />
+        <Button style="@style/CalculatorButton.Number" android:text="6" />
+        <Button style="@style/CalculatorButton.Operator" android:text="-" />
+        <Button style="@style/CalculatorButton.Operator" android:text="Ans" />
+
+        <Button style="@style/CalculatorButton.Number" android:text="1" />
+        <Button style="@style/CalculatorButton.Number" android:text="2" />
+        <Button style="@style/CalculatorButton.Number" android:text="3" />
+        <Button style="@style/CalculatorButton.Operator" android:text="x" />
+        <Button style="@style/CalculatorButton.Operator" android:text="M+" />
+
+        <Button style="@style/CalculatorButton.Number" android:text="0" />
+        <Button style="@style/CalculatorButton.Number" android:text="." />
+        <Button style="@style/CalculatorButton.Function" android:text="EXP" />
+        <Button style="@style/CalculatorButton.Operator" android:text="÷" />
+        <Button style="@style/CalculatorButton.Operator" android:text="M-" />
+
+        <Button style="@style/CalculatorButton.Number" android:text="±" />
+        <Button style="@style/CalculatorButton.Function" android:text="RND" />
+        <Button style="@style/CalculatorButton.Clear" android:text="AC" />
+        <Button style="@style/CalculatorButton.Result" android:text="=" />
+        <Button style="@style/CalculatorButton.Operator" android:text="MR" />
+
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
